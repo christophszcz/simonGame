@@ -1,0 +1,16 @@
+html, body {
+  height: 100%;
+}
+
+.circle-container{
+	height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle{
+  height: 400px;
+  width: 400px;
+  background-color: #000;
+  border-radius: 200px;
+}
