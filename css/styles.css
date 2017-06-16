@@ -22,3 +22,11 @@ body{
   background-color: #000;
   border-radius: 200px;
 }
+
+.red{
+  width: 50%; 
+  height: 50%; 
+  float: left;
+  border-right: 200px solid red;
+  border-radius: 0 200px 0 0;
+}
