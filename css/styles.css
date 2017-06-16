@@ -24,17 +24,20 @@ body{
 }
 
 .red{
-  width: 50%; 
-  height: 50%; 
+  position: fixed;
+  left: 50%;
+  height: 200px; 
   float: left;
-  border-right: 200px solid red;
+  border-right: 200px solid #D70000;
   border-radius: 0 200px 0 0;
 }
 
 .blue{
-  width: 50%;
-  height: 50%;
-  float: left;
-  border-bottom: 200px solid blue;
-  border-radius: 0 200px 0 0;
+  position: fixed;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  border-bottom: 200px solid #2E70FC;
+  border-radius: 0 0 200px 0;
 }
