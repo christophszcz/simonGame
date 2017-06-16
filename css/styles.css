@@ -30,3 +30,11 @@ body{
   border-right: 200px solid red;
   border-radius: 0 200px 0 0;
 }
+
+.blue{
+  width: 50%;
+  height: 50%;
+  float: left;
+  border-bottom: 200px solid blue;
+  border-radius: 0 200px 0 0;
+}
