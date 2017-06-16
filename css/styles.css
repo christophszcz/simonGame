@@ -41,3 +41,21 @@ body{
   border-bottom: 200px solid #2E70FC;
   border-radius: 0 0 200px 0;
 }
+
+.yellow{
+  position: fixed;
+  height: 200px;
+  top: 50%;
+  width: 200px;
+  border-radius: 0 0 0 200px;
+  border-bottom: 200px solid #E5BD27;
+}
+
+.green{
+  position: fixed;
+  height: 200px;
+  bottom: 50%;
+  width: 200px;
+  border-left: 200px solid #01A66C;
+  border-radius: 200px 0 0 0;
+}
