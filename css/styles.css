@@ -31,21 +31,24 @@ body{
 }
 
 .red{
+  position: absolute;
+  height: 170px;
+  width: 170px;
   float: left;
   border-radius: 0 170px 0 0;
   border-right: 170px solid #D70000;
-  height: 170px;
-  width: 170px;
-  left: 53%;
-  top: 4%;
-  position: absolute;
+  left: 210px;
+  bottom: 210px;
 }
 
 .blue{
-  top: 50%;
-  left: 50%;
-  border-radius: 0 0 200px 0;
-  border-bottom: 200px solid #2E70FC;
+  position: absolute;
+  height: 170px;
+  width: 170px;  
+  border-radius: 0 0 170px 0;
+  border-bottom: 170px solid #2E70FC;
+  top: 210px;
+  left: 210px;
 }
 
 .yellow{
