@@ -52,13 +52,21 @@ body{
 }
 
 .yellow{
-  top: 50%;
-  border-radius: 0 0 0 200px;
-  border-bottom: 200px solid #E5BD27;
+  position: absolute;
+  height: 170px;
+  width: 170px;
+  top: 210px;
+  right: 210px;
+  border-radius: 0 0 0 170px;
+  border-bottom: 170px solid #E5BD27;
 }
 
 .green{
-  bottom: 50%;
-  border-radius: 200px 0 0 0;
-  border-left: 200px solid #01A66C;
+  position: absolute;
+  height: 170px;
+  width: 170px;
+  bottom: 210px;
+  right: 210px;
+  border-radius: 170px 0 0 0;
+  border-left: 170px solid #01A66C;
 }
