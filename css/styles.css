@@ -17,9 +17,10 @@ body{
 }
 
 .circle{
+  position: fixed;
   height: 400px;
   width: 400px;
-  background-color: transparent;
+  background-color: #000;
   border-radius: 200px;
 }
 
@@ -30,10 +31,14 @@ body{
 }
 
 .red{
-  left: 50%;
   float: left;
-  border-radius: 0 200px 0 0;
-  border-right: 200px solid #D70000;
+  border-radius: 0 170px 0 0;
+  border-right: 170px solid #D70000;
+  height: 170px;
+  width: 170px;
+  left: 53%;
+  top: 4%;
+  position: absolute;
 }
 
 .blue{
