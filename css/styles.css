@@ -56,6 +56,10 @@ body{
   left: 210px;
 }
 
+.blue:active{
+  border-color: #85ABFC;
+}
+
 .yellow{
   top: 210px;
   right: 210px;
