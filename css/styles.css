@@ -113,3 +113,23 @@ body{
   right: 10px;
   top: 100px;
 }
+
+.buttons{
+  display: flex;
+  justify-content: center;
+}
+
+.circle-button{
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.start{
+  background-color: #FC0102;
+}
+
+.strict{
+  background-color: #FFFF00;
+}
