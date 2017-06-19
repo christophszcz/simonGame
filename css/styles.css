@@ -71,6 +71,10 @@ body{
   border-bottom: 170px solid #E5BD27;
 }
 
+.yellow:active{
+  border-color: #E5CB6B;
+}
+
 .green{
   bottom: 210px;
   right: 210px;
