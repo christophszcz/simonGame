@@ -166,3 +166,20 @@ body{
   text-transform: uppercase;
   margin-left:9px;
 }
+
+.switch-components{
+  display: flex;
+  justify-content: center;
+}
+
+.switch{
+  background-color: #000;
+  width: 30px;
+  height: 15px;
+}
+
+.square{
+  background-color: #3193DE;
+  height: 15px;
+  width: 15px;
+}
