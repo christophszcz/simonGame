@@ -9,12 +9,14 @@ square.addEventListener('click', function(){
 		square.style.marginLeft = '15px';
 		onOff = true;
 		count.value = '- -';
+		toggleSounds();
 	} else if (square.style.marginLeft === '15px' && onOff === true){
 		square.style.marginLeft = '0px';
 		count.value = '';
 		onOff = false;
 		dot.style.backgroundColor = '#32050C';
 		strictMode = false;
+		toggleSounds();
 	}
 });
 
@@ -37,18 +39,24 @@ var blue = document.getElementById('blue-id');
 var yellow = document.getElementById('yellow-id');
 var green = document.getElementById('green-id');
 
-red.addEventListener("click", function(){
-	document.getElementById('red-sound').play();
-});
+function toggleSounds(){
+	if (onOff === true){
+		red.addEventListener("click", function(){
+			document.getElementById('red-sound').play();
+		});
 
-blue.addEventListener("click", function(){
-	document.getElementById('blue-sound').play();
-});
+		blue.addEventListener("click", function(){
+			document.getElementById('blue-sound').play();
+		});
 
-yellow.addEventListener("click", function(){
-	document.getElementById('yellow-sound').play();
-});
-
-green.addEventListener("click", function(){
-	document.getElementById('green-sound').play();
-});
+		yellow.addEventListener("click", function(){
+			document.getElementById('yellow-sound').play();
+		});
+		green.addEventListener("click", function(){
+			document.getElementById('green-sound').play();
+		});
+	} else if (onOff === false){
+		var redSound = document.getElementById('red-sound');
+		redSound.src = "";
+	}
+}
