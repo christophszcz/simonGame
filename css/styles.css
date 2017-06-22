@@ -124,7 +124,7 @@ body{
   border: 2px solid #000;
   position: absolute;
   top: 79px;
-  right: 24px;
+  right: 23.6px;
 }
 
 .buttons{
@@ -198,6 +198,7 @@ body{
   border-radius: 3px;
   border: 2px solid #000;
   cursor: pointer;
+  margin-left: 0px;
 }
 
 .on-off{
