@@ -106,6 +106,7 @@ body{
   text-align: center;
   margin-top: 14px;
   font-family: 'pricedown';
+  margin-bottom: 0px;
 }
 
 #registered{
@@ -113,6 +114,17 @@ body{
   font-size: 10px;
   right: 7px;
   top: 60px;
+}
+
+.dot{
+  background-color: #5B4448;
+  height:8px;
+  width: 8px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  position: absolute;
+  top: 79px;
+  right: 24px;
 }
 
 .buttons{
@@ -185,6 +197,7 @@ body{
   width: 15px;
   border-radius: 3px;
   border: 2px solid #000;
+  cursor: pointer;
 }
 
 .on-off{
