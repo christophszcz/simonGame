@@ -4,6 +4,10 @@
   src: url('../fonts/pricedown.ttf'); 
 }
 
+@font-face{  font-family:'digital-clock-font';  
+  src: url('put_the_location_to_your_font.ttf or .otf'); 
+}
+
 /* Background */
 
 html, body {
@@ -162,9 +166,12 @@ body{
 .count{
   width:25px;
   height: 20px;
-  background-color: #5B4448;
+  background-color: #32050C;
   border-radius: 4px;
   border: 2px solid #000;
+  font-family: 'digital-clock-font';
+  color: #DC0D29;
+  text-align: center;
 }
 
 .control-text-group{
