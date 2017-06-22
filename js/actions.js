@@ -40,15 +40,23 @@ var yellow = document.getElementById('yellow-id');
 var green = document.getElementById('green-id');
 
 function toggleSounds(){
+	var redSound = document.getElementById('red-sound');
+	var blueSound = document.getElementById('blue-sound');
+	var yellowSound = document.getElementById('yellow-sound');
+	var greenSound = document.getElementById('green-sound');
+	if( onOff === true && redSound.src === "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" ){
+		redSound.src = "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
+		blueSound.src = "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3";
+		yellowSound.src = "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3";
+		greenSound.src = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"; 
+	}
 	if (onOff === true){
 		red.addEventListener("click", function(){
 			document.getElementById('red-sound').play();
 		});
-
 		blue.addEventListener("click", function(){
 			document.getElementById('blue-sound').play();
 		});
-
 		yellow.addEventListener("click", function(){
 			document.getElementById('yellow-sound').play();
 		});
@@ -56,7 +64,9 @@ function toggleSounds(){
 			document.getElementById('green-sound').play();
 		});
 	} else if (onOff === false){
-		var redSound = document.getElementById('red-sound');
-		redSound.src = "";
+		redSound.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+		blueSound.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+		yellowSound.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+		greenSound.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
 	}
 }
