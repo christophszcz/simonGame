@@ -11,6 +11,7 @@ square.addEventListener('click', function(){
 		count.value = '- -';
 	} else if (square.style.marginLeft === '15px' && onOff === true){
 		square.style.marginLeft = '0px';
+		count.value = '';
 		onOff = false;
 		dot.style.backgroundColor = '#32050C';
 		strictMode = false;
