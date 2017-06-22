@@ -173,15 +173,18 @@ body{
 }
 
 .switch{
-  background-color: #000;
+  background-color: #333333;
   width: 30px;
   height: 15px;
+  border-radius: 3px;
 }
 
 .square{
   background-color: #3193DE;
   height: 15px;
   width: 15px;
+  border-radius: 3px;
+  border: 2px solid #000;
 }
 
 .on-off{
