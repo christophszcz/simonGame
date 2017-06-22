@@ -12,6 +12,8 @@ square.addEventListener('click', function(){
 	} else if (square.style.marginLeft === '15px' && onOff === true){
 		square.style.marginLeft = '0px';
 		onOff = false;
+		dot.style.backgroundColor = '#32050C';
+		strictMode = false;
 	}
 });
 
@@ -19,11 +21,11 @@ square.addEventListener('click', function(){
 var strict = document.getElementById('strict-id');
 var dot = document.getElementById('dot-id');
 strict.addEventListener('click', function(){
-	if(onOff === true  && (dot.style.backgroundColor === "rgb(91, 68, 72)" || dot.style.backgroundColor === '') ){
+	if(onOff === true  && (dot.style.backgroundColor === "rgb(50, 5, 12)" || dot.style.backgroundColor === '') ){
 		dot.style.backgroundColor = '#DC0D29';
 		strictMode = true;
 	}else if (onOff === true && dot.style.backgroundColor === "rgb(220, 13, 41)"){
-		dot.style.backgroundColor = '#5B4448';
+		dot.style.backgroundColor = '#32050C';
 		strictMode = false;
 	}
 });
