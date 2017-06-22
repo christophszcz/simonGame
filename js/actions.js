@@ -30,3 +30,25 @@ strict.addEventListener('click', function(){
 		strictMode = false;
 	}
 });
+
+//User Input
+var red = document.getElementById('red-id');
+var blue = document.getElementById('blue-id');
+var yellow = document.getElementById('yellow-id');
+var green = document.getElementById('green-id');
+
+red.addEventListener("click", function(){
+	document.getElementById('red-sound').play();
+});
+
+blue.addEventListener("click", function(){
+	document.getElementById('blue-sound').play();
+});
+
+yellow.addEventListener("click", function(){
+	document.getElementById('yellow-sound').play();
+});
+
+green.addEventListener("click", function(){
+	document.getElementById('green-sound').play();
+});
