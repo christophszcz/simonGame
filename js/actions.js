@@ -1,5 +1,6 @@
 var onOff = false;
 var strictMode = false;
+clickToggle();
 
 //On-off toggle
 var square = document.getElementById('square-id');
@@ -10,6 +11,7 @@ square.addEventListener('click', function(){
 		onOff = true;
 		count.value = '- -';
 		toggleSounds();
+		clickToggle();
 	} else if (square.style.marginLeft === '15px' && onOff === true){
 		square.style.marginLeft = '0px';
 		count.value = '';
@@ -17,6 +19,7 @@ square.addEventListener('click', function(){
 		dot.style.backgroundColor = '#32050C';
 		strictMode = false;
 		toggleSounds();
+		clickToggle();
 	}
 });
 
@@ -68,5 +71,17 @@ function toggleSounds(){
 		blueSound.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
 		yellowSound.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
 		greenSound.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+	}
+}
+
+//Click Toggle
+
+function clickToggle(){
+	for (var i = 0; i < 4; i++){
+		if(onOff === true){
+			document.getElementsByClassName('quarter')[i].style.pointerEvents = "initial";
+		}else{
+			document.getElementsByClassName('quarter')[i].style.pointerEvents = "none";
+		}
 	}
 }
