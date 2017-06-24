@@ -43,6 +43,8 @@ var start = document.getElementById('start-id');
 start.addEventListener("click", function(){
 	if (onOff === true){
 		startPushed = true;
+		startGame();
+		console.log(simon);
 	}
 });
 
