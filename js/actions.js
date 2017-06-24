@@ -1,5 +1,6 @@
 var onOff = false;
 var strictMode = false;
+var startPushed = false;
 clickToggle();
 
 //On-off toggle
@@ -33,6 +34,14 @@ strict.addEventListener('click', function(){
 	}else if (onOff === true && dot.style.backgroundColor === "rgb(220, 13, 41)"){
 		dot.style.backgroundColor = '#32050C';
 		strictMode = false;
+	}
+});
+
+//Start button 
+var start = document.getElementById('start-id');
+start.addEventListener("click", function(){
+	if (onOff === true){
+		startPushed = true;
 	}
 });
 
