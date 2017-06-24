@@ -21,6 +21,7 @@ square.addEventListener('click', function(){
 		strictMode = false;
 		toggleSounds();
 		clickToggle();
+		startPushed = false;
 	}
 });
 
