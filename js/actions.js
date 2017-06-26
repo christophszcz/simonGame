@@ -80,12 +80,30 @@ function toggleSounds(){
 		});
 		blue.addEventListener("click", function(){
 			document.getElementById('blue-sound').play();
+			blue.classList.add('blue-clicked');
+			if(blue.style.borderColor === 'rgb(9,74,143)' || blue.style.borderColor === ''){	
+				setTimeout(function(){
+					blue.classList.remove('blue-clicked');
+				}, 500);	
+			}
 		});
 		yellow.addEventListener("click", function(){
 			document.getElementById('yellow-sound').play();
+			yellow.classList.add('yellow-clicked');	
+			if(yellow.style.borderColor === 'rgb(204,167,7)' || yellow.style.borderColor === ''){	
+				setTimeout(function(){
+					yellow.classList.remove('yellow-clicked');
+				}, 500);
+			}
 		});
 		green.addEventListener("click", function(){
 			document.getElementById('green-sound').play();
+			green.classList.add('green-clicked');	
+			if(green.style.borderColor === 'rgb(0,167,74)' || green.style.borderColor === ''){	
+				setTimeout(function(){
+					green.classList.remove('green-clicked');
+				}, 500);
+			}
 		});
 	} else if (onOff === false){
 		redSound.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
