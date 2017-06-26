@@ -12,10 +12,10 @@ function startGame(){
 	}
      
 	var j = 0; 
-	var redNumber = 0;                     
+	var redNumber = 1;                     
 	function playSound () {            
    	setTimeout(function () {  
-   		count.value =	redNumber;    
+   		count.value =	('0' + redNumber).slice(-2);    
       document.getElementById(simon[j] + '-sound').play();                  
       j++; 
       redNumber ++;                     
