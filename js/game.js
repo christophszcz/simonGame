@@ -10,11 +10,16 @@ function startGame(){
 		randomNumber();
 		simon[i] = colors[number];
 	}
-	for(j = 0 ; j < 20; j ++){
-		var colorValue = simon[j];
-		setTimeout(function() {   
-			document.getElementById(colorValue + '-sound').play();
-			console.log(colorValue);	 
-		}, 1000);
+     
+	var j = 0;                      
+	function playSound () {            
+   	setTimeout(function () {     
+      document.getElementById(simon[j] + '-sound').play();                  
+      j++;                      
+      if (j < 20) {             
+        playSound();              
+      }                         
+  	}, 3000)
 	}
+	playSound();
 }
