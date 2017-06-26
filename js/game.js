@@ -1,4 +1,4 @@
-var colors = ['red', 'blue', 'yellow', 'green'], number, simon = [], you = [];
+var colors = ['red', 'blue', 'yellow', 'green'], number, total = [], you = [], simon =[];
  
 function randomNumber(){
 	number = Math.floor(Math.random() * 4);
@@ -8,15 +8,19 @@ function randomNumber(){
 function startGame(){
 	for(i = 0 ; i < 20; i ++){
 		randomNumber();
-		simon[i] = colors[number];
+		total[i] = colors[number];
 	}
      
 	var j = 0; 
-	var redNumber = 1;                     
+	var redNumber = 1; 
+	if(square.style.marginLeft === '0px'){
+		return;
+	}                    
 	function playSound () {            
    	setTimeout(function () {  
    		count.value =	('0' + redNumber).slice(-2);    
-      document.getElementById(simon[j] + '-sound').play();                  
+      document.getElementById(total[j] + '-sound').play();
+      document.getElementById(total[j] + '-id').click();                  
       j++; 
       redNumber ++;                     
       if (j < 20) {             

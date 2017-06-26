@@ -48,12 +48,13 @@ body{
 .red{
   float: left;
   border-radius: 0 170px 0 0;
-  border-right: 170px solid #9F0F17;
+  border-right: 170px solid;
+  border-color: #9F0F17;
   left: 210px;
   bottom: 210px;
 }
 
-.red:active{
+.red-clicked{
   border-color: #ff4c4c;
 }
 
@@ -64,7 +65,7 @@ body{
   left: 210px;
 }
 
-.blue:active{
+.blue-clicked{
   border-color: #1c8cff;
 }
 
@@ -75,7 +76,7 @@ body{
   border-bottom: 170px solid #CCA707;
 }
 
-.yellow:active{
+.yellow-clicked{
   border-color: #FED93F;
 }
 
@@ -86,7 +87,7 @@ body{
   border-left: 170px solid #00A74A;
 }
 
-.green:active{
+.green-clicked{
   border-color: #13FF7C;
 }
 

@@ -23,6 +23,7 @@ square.addEventListener('click', function(){
 		clickToggle();
 		startPushed = false;
 		count.value = '- -';
+		redNumber = 1;
 		simon = [];
 	}
 });
@@ -70,6 +71,12 @@ function toggleSounds(){
 	if (onOff === true){
 		red.addEventListener("click", function(){
 			document.getElementById('red-sound').play();
+			if(red.style.borderColor === 'rgb(159, 15, 23)' || red.style.borderColor === ''){
+				red.classList.add('red-clicked');	
+				setTimeout(function(){
+					red.classList.remove('red-clicked');
+				}, 500);	
+			}
 		});
 		blue.addEventListener("click", function(){
 			document.getElementById('blue-sound').play();
