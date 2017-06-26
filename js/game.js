@@ -11,11 +11,14 @@ function startGame(){
 		simon[i] = colors[number];
 	}
      
-	var j = 0;                      
+	var j = 0; 
+	var redNumber = 0;                     
 	function playSound () {            
-   	setTimeout(function () {     
+   	setTimeout(function () {  
+   		count.value =	redNumber;    
       document.getElementById(simon[j] + '-sound').play();                  
-      j++;                      
+      j++; 
+      redNumber ++;                     
       if (j < 20) {             
         playSound();              
       }                         
