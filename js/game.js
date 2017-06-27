@@ -14,34 +14,57 @@ function startGame(){
 	var j = 0; 
 	var redNumber = 1; 
 	if(square.style.marginLeft === '0px'){
-		count.value = '- -';
+		count.value = '';
 		total = [];
+		simon = [];
 		return;
-	}                    
+	}  
+
 	function playSound () {            
    	setTimeout(function () {  
    		if(square.style.marginLeft === '0px'){
+				count.value = '';
+				total = [];
+				simon = [];
 				return;
 			}   
-   		count.value =	('0' + redNumber).slice(-2);    
-      document.getElementById(total[j] + '-sound').play();
+			simon.push(total[j]);
+   		count.value =	('0' + redNumber).slice(-2);
+   		var k = 0;
+   		function incremental(){
+   			setTimeout(function () {
+   				if(square.style.marginLeft === '0px'){
+						count.value = '';
+						total = [];
+						simon = [];
+						return;
+					}   
+					console.log(simon);    
+		      document.getElementById(simon[k] + '-sound').play();
 
-			if (total[j] === 'red'){
-				redLight();
-			} else if (total[j] === 'blue'){
-				blueLight();
-			}else if (total[j] === 'yellow'){
-				yellowLight();
-			}else if (total[j] === 'green'){
-				greenLight();
-			}
+					if (simon[k] === 'red'){
+						redLight();
+					} else if (simon[k] === 'blue'){
+						blueLight();
+					}else if (simon[k] === 'yellow'){
+						yellowLight();
+					}else if (simon[k] === 'green'){
+						greenLight();
+					}
+   				k++; 
+   				if(k < simon.length){
+		   			incremental();
+		   		}
+   			},3000)
+   		}
+   		incremental();
 
       j++; 
       redNumber ++;                     
       if (j < 20) {             
         playSound();              
       }                         
-  	}, 3000)
+  	}, 10000)
 	}
 	playSound();
 }

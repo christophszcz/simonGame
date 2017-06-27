@@ -22,7 +22,7 @@ square.addEventListener('click', function(){
 		toggleSounds();
 		clickToggle();
 		startPushed = false;
-		count.value = '- -';
+		count.value = '';
 		redNumber = 1;
 	}
 });
