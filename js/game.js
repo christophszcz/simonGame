@@ -20,13 +20,37 @@ function startGame(){
    	setTimeout(function () {  
    		count.value =	('0' + redNumber).slice(-2);    
       document.getElementById(total[j] + '-sound').play();
-      document.getElementById(total[j] + '-id').classList.add(total[j] + '-clicked');	
-      var colorValue =  componentToHex(document.getElementById(total[j] + '-id').style.borderColor);
-      if( document.getElementById(total[j] + '-id').style.borderColor === colorValue || document.getElementById(total[j] + '-id').style.borderColor === ''){
-				setTimeout(function(){
-					document.getElementById(total[j] + '-id').classList.remove(total[j] + '-clicked');
-				}, 500);	
-			}                 
+
+			if (total[j] === 'red'){
+				red.classList.add('red-clicked');	
+				if(red.style.borderColor === 'rgb(159, 15, 23)' || red.style.borderColor === ''){
+					setTimeout(function(){
+						red.classList.remove('red-clicked');
+					}, 500);	
+				}
+			} else if (total[j] === 'blue'){
+				blue.classList.add('blue-clicked');
+				if(blue.style.borderColor === 'rgb(9,74,143)' || blue.style.borderColor === ''){	
+					setTimeout(function(){
+						blue.classList.remove('blue-clicked');
+					}, 500);	
+				}
+			}else if (total[j] === 'yellow'){
+				yellow.classList.add('yellow-clicked');	
+				if(yellow.style.borderColor === 'rgb(204,167,7)' || yellow.style.borderColor === ''){	
+					setTimeout(function(){
+						yellow.classList.remove('yellow-clicked');
+					}, 500);
+				}
+			}else if (total[j] === 'green'){
+				green.classList.add('green-clicked');	
+				if(green.style.borderColor === 'rgb(0,167,74)' || green.style.borderColor === ''){	
+					setTimeout(function(){
+						green.classList.remove('green-clicked');
+					}, 500);
+				}
+			}
+
       j++; 
       redNumber ++;                     
       if (j < 20) {             

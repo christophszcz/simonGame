@@ -47,7 +47,7 @@ start.addEventListener("click", function(){
 	if (onOff === true){
 		startPushed = true;
 		startGame();
-		console.log(simon);
+		console.log(total);
 	}
 });
 
