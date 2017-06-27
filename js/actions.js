@@ -24,7 +24,6 @@ square.addEventListener('click', function(){
 		startPushed = false;
 		count.value = '- -';
 		redNumber = 1;
-		simon = [];
 	}
 });
 

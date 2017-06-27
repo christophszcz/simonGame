@@ -14,10 +14,15 @@ function startGame(){
 	var j = 0; 
 	var redNumber = 1; 
 	if(square.style.marginLeft === '0px'){
+		count.value = '- -';
+		total = [];
 		return;
 	}                    
 	function playSound () {            
    	setTimeout(function () {  
+   		if(square.style.marginLeft === '0px'){
+				return;
+			}   
    		count.value =	('0' + redNumber).slice(-2);    
       document.getElementById(total[j] + '-sound').play();
 
