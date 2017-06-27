@@ -22,33 +22,13 @@ function startGame(){
       document.getElementById(total[j] + '-sound').play();
 
 			if (total[j] === 'red'){
-				red.classList.add('red-clicked');	
-				if(red.style.borderColor === 'rgb(159, 15, 23)' || red.style.borderColor === ''){
-					setTimeout(function(){
-						red.classList.remove('red-clicked');
-					}, 500);	
-				}
+				redLight();
 			} else if (total[j] === 'blue'){
-				blue.classList.add('blue-clicked');
-				if(blue.style.borderColor === 'rgb(9,74,143)' || blue.style.borderColor === ''){	
-					setTimeout(function(){
-						blue.classList.remove('blue-clicked');
-					}, 500);	
-				}
+				blueLight();
 			}else if (total[j] === 'yellow'){
-				yellow.classList.add('yellow-clicked');	
-				if(yellow.style.borderColor === 'rgb(204,167,7)' || yellow.style.borderColor === ''){	
-					setTimeout(function(){
-						yellow.classList.remove('yellow-clicked');
-					}, 500);
-				}
+				yellowLight();
 			}else if (total[j] === 'green'){
-				green.classList.add('green-clicked');	
-				if(green.style.borderColor === 'rgb(0,167,74)' || green.style.borderColor === ''){	
-					setTimeout(function(){
-						green.classList.remove('green-clicked');
-					}, 500);
-				}
+				greenLight();
 			}
 
       j++; 

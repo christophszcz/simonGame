@@ -71,39 +71,19 @@ function toggleSounds(){
 	if (onOff === true){
 		red.addEventListener("click", function(){
 			document.getElementById('red-sound').play();
-			red.classList.add('red-clicked');	
-			if(red.style.borderColor === 'rgb(159, 15, 23)' || red.style.borderColor === ''){
-				setTimeout(function(){
-					red.classList.remove('red-clicked');
-				}, 500);	
-			}
+			redLight();
 		});
 		blue.addEventListener("click", function(){
 			document.getElementById('blue-sound').play();
-			blue.classList.add('blue-clicked');
-			if(blue.style.borderColor === 'rgb(9,74,143)' || blue.style.borderColor === ''){	
-				setTimeout(function(){
-					blue.classList.remove('blue-clicked');
-				}, 500);	
-			}
+			blueLight();
 		});
 		yellow.addEventListener("click", function(){
 			document.getElementById('yellow-sound').play();
-			yellow.classList.add('yellow-clicked');	
-			if(yellow.style.borderColor === 'rgb(204,167,7)' || yellow.style.borderColor === ''){	
-				setTimeout(function(){
-					yellow.classList.remove('yellow-clicked');
-				}, 500);
-			}
+			yellowLight();
 		});
 		green.addEventListener("click", function(){
 			document.getElementById('green-sound').play();
-			green.classList.add('green-clicked');	
-			if(green.style.borderColor === 'rgb(0,167,74)' || green.style.borderColor === ''){	
-				setTimeout(function(){
-					green.classList.remove('green-clicked');
-				}, 500);
-			}
+			greenLight();
 		});
 	} else if (onOff === false){
 		redSound.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
@@ -122,5 +102,43 @@ function clickToggle(){
 		}else{
 			document.getElementsByClassName('quarter')[i].style.pointerEvents = "none";
 		}
+	}
+}
+
+//Button lighting up
+
+function redLight(){
+	red.classList.add('red-clicked');	
+	if(red.style.borderColor === 'rgb(159, 15, 23)' || red.style.borderColor === ''){
+		setTimeout(function(){
+			red.classList.remove('red-clicked');
+		}, 500);	
+	}
+}
+
+function blueLight(){
+	blue.classList.add('blue-clicked');
+	if(blue.style.borderColor === 'rgb(9,74,143)' || blue.style.borderColor === ''){	
+		setTimeout(function(){
+			blue.classList.remove('blue-clicked');
+		}, 500);	
+	}
+}
+
+function yellowLight(){
+	yellow.classList.add('yellow-clicked');	
+	if(yellow.style.borderColor === 'rgb(204,167,7)' || yellow.style.borderColor === ''){	
+		setTimeout(function(){
+			yellow.classList.remove('yellow-clicked');
+		}, 500);
+	}
+}
+
+function greenLight(){
+	green.classList.add('green-clicked');	
+	if(green.style.borderColor === 'rgb(0,167,74)' || green.style.borderColor === ''){	
+		setTimeout(function(){
+			green.classList.remove('green-clicked');
+		}, 500);
 	}
 }
