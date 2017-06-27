@@ -20,7 +20,13 @@ function startGame(){
    	setTimeout(function () {  
    		count.value =	('0' + redNumber).slice(-2);    
       document.getElementById(total[j] + '-sound').play();
-      document.getElementById(total[j] + '-id').click();                  
+      document.getElementById(total[j] + '-id').classList.add(total[j] + '-clicked');	
+      var colorValue =  componentToHex(document.getElementById(total[j] + '-id').style.borderColor);
+      if( document.getElementById(total[j] + '-id').style.borderColor === colorValue || document.getElementById(total[j] + '-id').style.borderColor === ''){
+				setTimeout(function(){
+					document.getElementById(total[j] + '-id').classList.remove(total[j] + '-clicked');
+				}, 500);	
+			}                 
       j++; 
       redNumber ++;                     
       if (j < 20) {             
@@ -29,4 +35,9 @@ function startGame(){
   	}, 3000)
 	}
 	playSound();
+}
+
+function componentToHex(c) {
+  var hex = c.toString(16);
+  return hex.length == 1 ? "0" + hex : hex;
 }

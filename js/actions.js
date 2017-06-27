@@ -71,8 +71,8 @@ function toggleSounds(){
 	if (onOff === true){
 		red.addEventListener("click", function(){
 			document.getElementById('red-sound').play();
+			red.classList.add('red-clicked');	
 			if(red.style.borderColor === 'rgb(159, 15, 23)' || red.style.borderColor === ''){
-				red.classList.add('red-clicked');	
 				setTimeout(function(){
 					red.classList.remove('red-clicked');
 				}, 500);	
