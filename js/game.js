@@ -30,10 +30,11 @@ function startGame(){
 			}   
 			simon.push(total[j]);
    		count.value =	('0' + redNumber).slice(-2);
+ 		 	if(you.length > 0){
+ 				console.log("You " + you);
+ 			} 
    		console.log(simon);
-   		if(you.length > 0){
-   			console.log(you);
-   		}
+   		you = [];
    		var k = 0;
 
    		//Button pressing session
@@ -66,7 +67,7 @@ function startGame(){
       j++; 
       redNumber ++;                     
       if (j < 20) {             
-        playSound();              
+        playSound();             
       }                         
   	}, 2500 * redNumber)
 	}

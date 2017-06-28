@@ -87,7 +87,7 @@ function toggleSounds(){
 		green.addEventListener("click", function(){
 			document.getElementById('green-sound').play();
 			greenLight();
-			you.push('blue');
+			you.push('green');
 		});
 	} else if (onOff === false){
 		redSound.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
