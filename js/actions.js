@@ -2,6 +2,7 @@ var onOff = false;
 var strictMode = false;
 var startPushed = false;
 clickToggle();
+var you = [];
 
 //On-off toggle
 var square = document.getElementById('square-id');
@@ -71,18 +72,22 @@ function toggleSounds(){
 		red.addEventListener("click", function(){
 			document.getElementById('red-sound').play();
 			redLight();
+			you.push('red');
 		});
 		blue.addEventListener("click", function(){
 			document.getElementById('blue-sound').play();
 			blueLight();
+			you.push('blue');
 		});
 		yellow.addEventListener("click", function(){
 			document.getElementById('yellow-sound').play();
 			yellowLight();
+			you.push('yellow');
 		});
 		green.addEventListener("click", function(){
 			document.getElementById('green-sound').play();
 			greenLight();
+			you.push('blue');
 		});
 	} else if (onOff === false){
 		redSound.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";

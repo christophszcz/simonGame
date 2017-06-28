@@ -1,4 +1,4 @@
-var colors = ['red', 'blue', 'yellow', 'green'], number, total = [], you = [], simon =[];
+var colors = ['red', 'blue', 'yellow', 'green'], number, total = [], simon =[];
  
 function randomNumber(){
 	number = Math.floor(Math.random() * 4);
@@ -31,6 +31,9 @@ function startGame(){
 			simon.push(total[j]);
    		count.value =	('0' + redNumber).slice(-2);
    		console.log(simon);
+   		if(you.length > 0){
+   			console.log(you);
+   		}
    		var k = 0;
 
    		//Button pressing session
