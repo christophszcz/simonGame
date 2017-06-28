@@ -12,22 +12,27 @@ function startGame(){
 	}
      
 	var j = 0; 
-	var redNumber = 1; 
+	var redNumber = 1;
+	// Off 
 	if(square.style.marginLeft === '0px'){
 		count.value = '';
 		total = [];
 		simon = [];
+		you = [];
 		return;
 	}  
 
 	function playSound () {            
-   	setTimeout(function () {  
+   	setTimeout(function () { 
+   		// Off 
    		if(square.style.marginLeft === '0px'){
 				count.value = '';
 				total = [];
 				simon = [];
+				you = [];
 				return;
-			}   
+			} 
+
 			simon.push(total[j]);
    		count.value =	('0' + redNumber).slice(-2);
  		 	if(you.length > 0){
@@ -40,10 +45,12 @@ function startGame(){
    		//Button pressing session
    		function incremental(){
    			setTimeout(function () {
+   				// Off
    				if(square.style.marginLeft === '0px'){
 						count.value = '';
 						total = [];
 						simon = [];
+						you = [];
 						return;
 					}       
 		      document.getElementById(simon[k] + '-sound').play();
