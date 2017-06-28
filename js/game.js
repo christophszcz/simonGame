@@ -30,7 +30,10 @@ function startGame(){
 			}   
 			simon.push(total[j]);
    		count.value =	('0' + redNumber).slice(-2);
+   		console.log(simon);
    		var k = 0;
+
+   		//Button pressing session
    		function incremental(){
    			setTimeout(function () {
    				if(square.style.marginLeft === '0px'){
@@ -38,10 +41,8 @@ function startGame(){
 						total = [];
 						simon = [];
 						return;
-					}   
-					console.log(simon);    
+					}       
 		      document.getElementById(simon[k] + '-sound').play();
-
 					if (simon[k] === 'red'){
 						redLight();
 					} else if (simon[k] === 'blue'){
@@ -55,7 +56,7 @@ function startGame(){
    				if(k < simon.length){
 		   			incremental();
 		   		}
-   			},3000)
+   			},1000)
    		}
    		incremental();
 
@@ -64,7 +65,7 @@ function startGame(){
       if (j < 20) {             
         playSound();              
       }                         
-  	}, 10000)
+  	}, 2500 * redNumber)
 	}
 	playSound();
 }
