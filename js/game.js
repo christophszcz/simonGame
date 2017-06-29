@@ -13,6 +13,7 @@ function startGame(){
      
 	var j = 0; 
 	var redNumber = 1;
+	you = [];
 	// Off 
 	if(square.style.marginLeft === '0px'){
 		count.value = '';
@@ -31,11 +32,16 @@ function startGame(){
 				simon = [];
 				you = [];
 				return;
-			} 
+			}
 
+			//Show you array
+			if(you.length > 0){
+ 				console.log("You " + you);
+ 			} 
+ 			
 			//Cancel after wrong answer
    		if (JSON.stringify(you) !== JSON.stringify(simon)){                     
-   			count.value = '! !';
+   			count.value = 'X';
    			total = [];
 				simon = [];
 				you = [];
@@ -44,9 +50,9 @@ function startGame(){
    
 			simon.push(total[j]);
    		count.value =	('0' + redNumber).slice(-2);
- 		 	if(you.length > 0){
- 				console.log("You " + you);
- 			} 
+ 		 // 	if(you.length > 0){
+ 			// 	console.log("You " + you);
+ 			// } 
    		console.log(simon);
    		you = [];
    		var k = 0;

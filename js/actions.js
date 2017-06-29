@@ -3,8 +3,10 @@ var strictMode = false;
 var startPushed = false;
 clickToggle();
 var you = [];
+var runAmount = 0;
 
 //On-off toggle
+
 var square = document.getElementById('square-id');
 var count = document.getElementById('count-id');
 square.addEventListener('click', function(){
@@ -12,7 +14,9 @@ square.addEventListener('click', function(){
 		square.style.marginLeft = '15px';
 		onOff = true;
 		count.value = '- -';
-		toggleSounds();
+		if (runAmount === 0){
+			toggleSounds();
+		}
 		clickToggle();
 	} else if (square.style.marginLeft === '15px' && onOff === true){
 		square.style.marginLeft = '0px';
@@ -20,7 +24,7 @@ square.addEventListener('click', function(){
 		onOff = false;
 		dot.style.backgroundColor = '#32050C';
 		strictMode = false;
-		toggleSounds();
+		// toggleSounds();
 		clickToggle();
 		startPushed = false;
 		you = [];
@@ -46,6 +50,7 @@ var start = document.getElementById('start-id');
 start.addEventListener("click", function(){
 	if (onOff === true){
 		startPushed = true;
+		you = [];
 		startGame();
 		console.log(total);
 	}
@@ -58,6 +63,7 @@ var yellow = document.getElementById('yellow-id');
 var green = document.getElementById('green-id');
 
 function toggleSounds(){
+	runAmount ++;
 	var redSound = document.getElementById('red-sound');
 	var blueSound = document.getElementById('blue-sound');
 	var yellowSound = document.getElementById('yellow-sound');
