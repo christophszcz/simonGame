@@ -38,9 +38,10 @@ function startGame(){
 			if(you.length > 0){
  				console.log("You " + you);
  			} 
- 			
+
 			//Cancel after wrong answer
-   		if (JSON.stringify(you) !== JSON.stringify(simon)){                     
+   		if (JSON.stringify(you) !== JSON.stringify(simon)){ 
+   			document.getElementById('mistake-sound').play();                   
    			count.value = 'X';
    			total = [];
 				simon = [];
