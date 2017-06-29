@@ -33,6 +33,15 @@ function startGame(){
 				return;
 			} 
 
+			//Cancel after wrong answer
+   		if (JSON.stringify(you) !== JSON.stringify(simon)){                     
+   			count.value = '! !';
+   			total = [];
+				simon = [];
+				you = [];
+   			return;
+   		}
+   
 			simon.push(total[j]);
    		count.value =	('0' + redNumber).slice(-2);
  		 	if(you.length > 0){
@@ -52,7 +61,8 @@ function startGame(){
 						simon = [];
 						you = [];
 						return;
-					}       
+					}    
+           
 		      document.getElementById(simon[k] + '-sound').play();
 					if (simon[k] === 'red'){
 						redLight();
@@ -70,12 +80,11 @@ function startGame(){
    			},1000)
    		}
    		incremental();
-
-      j++; 
-      redNumber ++;                     
+   		j++; 
+	    redNumber ++;                
       if (j < 20) {             
         playSound();             
-      }                         
+      }                     
   	}, 2500 * redNumber)
 	}
 	playSound();
