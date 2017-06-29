@@ -5,6 +5,8 @@ function randomNumber(){
 	console.log(randomNumber);
 }
 
+var redNumber = 1;
+
 function startGame(){
 	for(i = 0 ; i < 20; i ++){
 		randomNumber();
@@ -12,7 +14,6 @@ function startGame(){
 	}
      
 	var j = 0; 
-	var redNumber = 1;
 	you = [];
 	// Off 
 	if(square.style.marginLeft === '0px'){
@@ -20,6 +21,7 @@ function startGame(){
 		total = [];
 		simon = [];
 		you = [];
+		var redNumber = 1;
 		return;
 	}  
 
@@ -31,6 +33,7 @@ function startGame(){
 				total = [];
 				simon = [];
 				you = [];
+				var redNumber = 1;
 				return;
 			}
 
@@ -40,17 +43,23 @@ function startGame(){
  			} 
 
 			//Cancel after wrong answer
-   		if (JSON.stringify(you) !== JSON.stringify(simon)){ 
-   			document.getElementById('mistake-sound').play();                   
+			if(JSON.stringify(you) !== JSON.stringify(simon)){ 
+				document.getElementById('mistake-sound').play();                   
    			count.value = 'X';
-   			total = [];
-				simon = [];
-				you = [];
-   			return;
-   		}
+			} else{
+   			simon.push(total[j]);
+			}
+			
+			count.value =	('0' + redNumber).slice(-2);
+   	// 	}else if (JSON.stringify(you) !== JSON.stringify(simon)){ 
+   	// 		document.getElementById('mistake-sound').play();                   
+   	// 		count.value = 'X';
+   	// 		total = [];
+				// simon = [];
+				// you = [];
+   	// 		return;
+   	// 	} 
    
-			simon.push(total[j]);
-   		count.value =	('0' + redNumber).slice(-2);
  		 // 	if(you.length > 0){
  			// 	console.log("You " + you);
  			// } 
@@ -67,6 +76,7 @@ function startGame(){
 						total = [];
 						simon = [];
 						you = [];
+						var redNumber = 1;
 						return;
 					}    
            
@@ -87,12 +97,17 @@ function startGame(){
    			},1000)
    		}
    		incremental();
-   		j++; 
-	    redNumber ++;                
+   		if(JSON.stringify(you) === JSON.stringify(simon)){ 
+				redNumber ++; 	
+			} else {
+				redNumber = 2;
+			}
+			j++;
+			      
       if (j < 20) {             
         playSound();             
       }                     
-  	}, 2500 * redNumber)
+  	}, 2500 * 5)
 	}
 	playSound();
 }
