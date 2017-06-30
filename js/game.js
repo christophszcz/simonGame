@@ -63,7 +63,12 @@ function startGame(){
  			} 
 
 			//Cancel after wrong answer
-			if(JSON.stringify(you) !== JSON.stringify(simon)){ 
+   		if (strictMode && JSON.stringify(you) !== JSON.stringify(simon)){
+   			document.getElementById('mistake-sound').play();                   
+   			count.value = 'X';
+   			startGame();
+   			return;
+   		} else if(JSON.stringify(you) !== JSON.stringify(simon)){ 
 				document.getElementById('mistake-sound').play();                   
    			count.value = 'X';
 			} else{
