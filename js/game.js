@@ -1,4 +1,4 @@
-var colors = ['red', 'blue', 'yellow', 'green'], number, total = [], simon =[];
+var colors = ['red', 'blue', 'yellow', 'green'], number, total = [], simon =[]; k = 0; j = 0;
  
 function randomNumber(){
 	number = Math.floor(Math.random() * 4);
@@ -10,6 +10,17 @@ function startGame(){
 		randomNumber();
 		total[i] = colors[number];
 	}
+
+	if (startPushed === true){
+		redNumber = 0;
+		you = [];
+		you.length = 0;
+		simon = [];
+		simon.length = 0;
+		count.value = 1;
+		j = 0;
+		k = 0;
+	}
      
 	var j = 0; 
 	var redNumber = 1;
@@ -18,8 +29,13 @@ function startGame(){
 	if(square.style.marginLeft === '0px'){
 		count.value = '';
 		total = [];
+		total.length = 0;
 		simon = [];
+		simon.length = 0;
 		you = [];
+		you.length = 0;
+		j = 0;
+		k = 0;
 		redNumber = 1;
 		return;
 	}  
@@ -30,9 +46,14 @@ function startGame(){
    		if(square.style.marginLeft === '0px'){
 				count.value = '';
 				total = [];
+				total.length = 0;
 				simon = [];
+				simon.length = 0;
 				you = [];
+				you.length = 0;
 				redNumber = 1;
+				j = 0;
+				k = 0;
 				return;
 			}
 
@@ -49,19 +70,7 @@ function startGame(){
    			simon.push(total[j]);
    			count.value =	('0' + redNumber).slice(-2);
 			}
-			
-   	// 	}else if (JSON.stringify(you) !== JSON.stringify(simon)){ 
-   	// 		document.getElementById('mistake-sound').play();                   
-   	// 		count.value = 'X';
-   	// 		total = [];
-				// simon = [];
-				// you = [];
-   	// 		return;
-   	// 	} 
-   
- 		 // 	if(you.length > 0){
- 			// 	console.log("You " + you);
- 			// } 
+  
    		console.log(simon);
    		you = [];
    		var k = 0;
@@ -76,6 +85,8 @@ function startGame(){
 						simon = [];
 						you = [];
 						redNumber = 1;
+						j = 0;
+						k = 0;
 						return;
 					}    
            
@@ -97,16 +108,18 @@ function startGame(){
    		}
    		incremental();
    		if(JSON.stringify(you) === JSON.stringify(simon)){ 
-				redNumber ++; 	
+				redNumber ++;
+				j++; 	
 			} else {
 				redNumber = simon.length + 1;
+				j = simon.length; 
 			}
-			j++;
 			      
       if (j < 20) {             
         playSound();             
       }                     
-  	}, 3500 * (simon.length === 1 ? 2 : simon.length) )
+  	}, 3500 * redNumber)
+  	//(simon.length === 1 ? 2 : simon.length)
 	}
 	playSound();
 }
