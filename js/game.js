@@ -5,8 +5,6 @@ function randomNumber(){
 	console.log(randomNumber);
 }
 
-var redNumber = 1;
-
 function startGame(){
 	for(i = 0 ; i < 20; i ++){
 		randomNumber();
@@ -14,6 +12,7 @@ function startGame(){
 	}
      
 	var j = 0; 
+	var redNumber = 1;
 	you = [];
 	// Off 
 	if(square.style.marginLeft === '0px'){
@@ -21,11 +20,11 @@ function startGame(){
 		total = [];
 		simon = [];
 		you = [];
-		var redNumber = 1;
+		redNumber = 1;
 		return;
 	}  
 
-	function playSound () {            
+	function playSound () {          
    	setTimeout(function () { 
    		// Off 
    		if(square.style.marginLeft === '0px'){
@@ -33,7 +32,7 @@ function startGame(){
 				total = [];
 				simon = [];
 				you = [];
-				var redNumber = 1;
+				redNumber = 1;
 				return;
 			}
 
@@ -48,9 +47,9 @@ function startGame(){
    			count.value = 'X';
 			} else{
    			simon.push(total[j]);
+   			count.value =	('0' + redNumber).slice(-2);
 			}
 			
-			count.value =	('0' + redNumber).slice(-2);
    	// 	}else if (JSON.stringify(you) !== JSON.stringify(simon)){ 
    	// 		document.getElementById('mistake-sound').play();                   
    	// 		count.value = 'X';
@@ -76,7 +75,7 @@ function startGame(){
 						total = [];
 						simon = [];
 						you = [];
-						var redNumber = 1;
+						redNumber = 1;
 						return;
 					}    
            
@@ -100,14 +99,14 @@ function startGame(){
    		if(JSON.stringify(you) === JSON.stringify(simon)){ 
 				redNumber ++; 	
 			} else {
-				redNumber = 2;
+				redNumber = simon.length + 1;
 			}
 			j++;
 			      
       if (j < 20) {             
         playSound();             
       }                     
-  	}, 2500 * 5)
+  	}, 3500 * (simon.length === 1 ? 2 : simon.length) )
 	}
 	playSound();
 }
