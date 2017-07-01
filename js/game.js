@@ -62,8 +62,12 @@ function startGame(){
  				console.log("You " + you);
  			} 
 
+ 			if(JSON.stringify(you) === JSON.stringify(simon) && you.length === 20){ 
+				document.getElementById('victory-sound').play();                   
+				count.value = ':)';
+				startGame(); 
 			//Strict mode restart
-   		if (strictMode && JSON.stringify(you) !== JSON.stringify(simon)){
+   		} else if (strictMode && JSON.stringify(you) !== JSON.stringify(simon)){
    			document.getElementById('mistake-sound').play();                   
    			count.value = 'X';
    			startGame();
@@ -121,22 +125,13 @@ function startGame(){
 				j = simon.length; 
 			}
 			      
-      if (j < 20) {             
+      if (j < 21) {             
         playSound();               
     	}               
   	}, 1000 * redNumber)
   	//(simon.length === 1 ? 2 : simon.length)
 	}
 	playSound();
-}
-
-//Check for victory
-function victoryCheck(){
-	if(JSON.stringify(you) === JSON.stringify(simon) && you.length === 20){ 
-		document.getElementById('victory-sound').play();                   
-		count.value = ':)';
-		startGame();
-	} 
 }
 
 function componentToHex(c) {

@@ -79,25 +79,25 @@ function toggleSounds(){
 			document.getElementById('red-sound').play();
 			redLight();
 			you.push('red');
-			victoryCheck();
+			// victoryCheck();
 		});
 		blue.addEventListener("click", function(){
 			document.getElementById('blue-sound').play();
 			blueLight();
 			you.push('blue');
-			victoryCheck();
+			// victoryCheck();
 		});
 		yellow.addEventListener("click", function(){
 			document.getElementById('yellow-sound').play();
 			yellowLight();
 			you.push('yellow');
-			victoryCheck();
+			// victoryCheck();
 		});
 		green.addEventListener("click", function(){
 			document.getElementById('green-sound').play();
 			greenLight();
 			you.push('green');
-			victoryCheck();
+			// victoryCheck();
 		});
 	} else if (onOff === false){
 		redSound.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
