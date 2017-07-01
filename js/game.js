@@ -62,12 +62,13 @@ function startGame(){
  				console.log("You " + you);
  			} 
 
-			//Cancel after wrong answer
+			//Strict mode restart
    		if (strictMode && JSON.stringify(you) !== JSON.stringify(simon)){
    			document.getElementById('mistake-sound').play();                   
    			count.value = 'X';
    			startGame();
    			return;
+   		// Cancel after wrong answer
    		} else if(JSON.stringify(you) !== JSON.stringify(simon)){ 
 				document.getElementById('mistake-sound').play();                   
    			count.value = 'X';
@@ -109,7 +110,7 @@ function startGame(){
    				if(k < simon.length){
 		   			incremental();
 		   		}
-   			},1000)
+   			},500)
    		}
    		incremental();
    		if(JSON.stringify(you) === JSON.stringify(simon)){ 
@@ -121,12 +122,21 @@ function startGame(){
 			}
 			      
       if (j < 20) {             
-        playSound();             
-      }                     
-  	}, 3500 * redNumber)
+        playSound();               
+    	}               
+  	}, 1000 * redNumber)
   	//(simon.length === 1 ? 2 : simon.length)
 	}
 	playSound();
+}
+
+//Check for victory
+function victoryCheck(){
+	if(JSON.stringify(you) === JSON.stringify(simon) && you.length === 20){ 
+		document.getElementById('victory-sound').play();                   
+		count.value = ':)';
+		startGame();
+	} 
 }
 
 function componentToHex(c) {
