@@ -114,7 +114,7 @@ function startGame(){
    				if(k < simon.length){
 		   			incremental();
 		   		}
-   			},500)
+   			},1000)
    		}
    		incremental();
    		if(JSON.stringify(you) === JSON.stringify(simon)){ 
@@ -128,7 +128,7 @@ function startGame(){
       if (j < 21) {             
         playSound();               
     	}               
-  	}, 1000 * redNumber)
+  	}, 3500 * redNumber)
   	//(simon.length === 1 ? 2 : simon.length)
 	}
 	playSound();
