@@ -64,8 +64,8 @@ function startGame(){
 
  			if(JSON.stringify(you) === JSON.stringify(simon) && you.length === 20){ 
 				document.getElementById('victory-sound').play();                   
-				count.value = ':)';
-				startGame(); 
+				startGame();
+				count.value = ':)'; 
 			//Strict mode restart
    		} else if (strictMode && JSON.stringify(you) !== JSON.stringify(simon)){
    			document.getElementById('mistake-sound').play();                   
