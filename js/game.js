@@ -17,7 +17,7 @@ function startGame(){
 		you.length = 0;
 		simon = [];
 		simon.length = 0;
-		count.value = 1;
+		count.value = '01';
 		j = 0;
 		k = 0;
 	}
@@ -69,8 +69,8 @@ function startGame(){
 			//Strict mode restart
    		} else if (strictMode && JSON.stringify(you) !== JSON.stringify(simon)){
    			document.getElementById('mistake-sound').play();                   
-   			count.value = 'X';
    			startGame();
+   			count.value = 'X';
    			return;
    		// Cancel after wrong answer
    		} else if(JSON.stringify(you) !== JSON.stringify(simon)){ 
