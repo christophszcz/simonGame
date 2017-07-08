@@ -32,10 +32,10 @@ body{
 
 .circle{
   position: fixed;
-  height: 400px;
-  width: 400px;
+  height: 500px;
+  width: 500px;
   background-color: #000;
-  border-radius: 200px;
+  border-radius: 250px;
 }
 
 .quarter{
@@ -93,14 +93,14 @@ body{
 
 /* Inner Circle */
 
-.mini-circle{
+.mini-circle {
   position: absolute;
-  left: 100px;
-  bottom: 100px;
-  height: 200px;
-  width: 200px;
+  left: 125px;
+  bottom: 125px;
+  height: 250px;
+  width: 250px;
   background-color: #fff;
-  border-radius: 200px;
+  border-radius: 250px;
   z-index: 1001;
   border: 13px solid #000;
 }
@@ -218,4 +218,36 @@ body{
   margin-right: 3px;
   margin-top: 2px;
   margin-bottom: 2px;
+}
+
+/* < 700px */
+
+@media(max-width: 700px){
+
+  .circle{
+    height: 400px;
+    width: 400px;
+    border-radius: 200px;
+  }
+
+  .mini-circle {
+    position: absolute;
+    left: 125px;
+    bottom: 125px;
+    height: 250px;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 250px;
+    z-index: 1001;
+    border: 13px solid #000;
+  }
+
+  .mini-circle{
+    left: 100px;
+    bottom: 100px;
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    border: 13px solid #000;
+  }
 }
