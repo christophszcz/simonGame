@@ -213,9 +213,9 @@ body{
   margin-left: 0px; 
 }
 
-.on-off{
+.on-off {
   font-family: 'Oswald',Arial,sans;
-  font-size: 8px;
+  font-size: 10px;
   text-transform: uppercase;
   text-align: center;
   margin-left: 3px;
@@ -300,9 +300,13 @@ body{
     height: 15px;
     width: 15px;
   }
-  
+
   .switch{
     width: 30px;
     height: 15px;
+  }
+
+  .on-off{
+    font-size: 8px;
   }
 }
