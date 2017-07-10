@@ -9,16 +9,24 @@ var runAmount = 0;
 
 var square = document.getElementById('square-id');
 var count = document.getElementById('count-id');
+var mainCircle = document.getElementById('circle-id'),
+	style = window.getComputedStyle(mainCircle),
+	cHeight = style.getPropertyValue('height');
+
 square.addEventListener('click', function(){
 	if(square.style.marginLeft === '0px' ||  square.style.marginLeft === ''){
-		square.style.marginLeft = '15px';
+		if (window.innerWidth > 700){
+			square.style.marginLeft = '18.75px';
+		} else{
+			square.style.marginLeft = '15px';
+		}
 		onOff = true;
 		count.value = '- -';
 		if (runAmount === 0){
 			toggleSounds();
 		}
 		clickToggle();
-	} else if (square.style.marginLeft === '15px' && onOff === true){
+	} else if ((square.style.marginLeft === '15px' || square.style.marginLeft === '18.75px')  && onOff === true){
 		square.style.marginLeft = '0px';
 		count.value = '';
 		onOff = false;
@@ -156,3 +164,15 @@ function greenLight(){
 		}, 500);
 	}
 }
+
+//Window width change event listener fixes sticky switch
+
+window.addEventListener('resize', function(e){
+	if (window.innerWidth > 700 && onOff === true ){
+		square.style.marginLeft = '18.75px';
+	} else if (window.innerWidth < 700 && onOff === true ){
+		square.style.marginLeft = '15px';
+	} else {
+		square.style.marginLeft = '0px';
+	}
+});
