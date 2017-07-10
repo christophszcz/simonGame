@@ -9,10 +9,13 @@ var runAmount = 0;
 
 var square = document.getElementById('square-id');
 var count = document.getElementById('count-id');
-var mainCircle = document.getElementsByClassName('circle');
+var mainCircle = document.getElementById('circle-id'),
+	style = window.getComputedStyle(mainCircle),
+	cHeight = style.getPropertyValue('height');
+
 square.addEventListener('click', function(){
 	if(square.style.marginLeft === '0px' ||  square.style.marginLeft === ''){
-		if (mainCircle.style.height === '500px'){
+		if (cHeight === '500px'){
 			square.style.marginLeft = '18.75px';
 		} else{
 			square.style.marginLeft = '15px';
