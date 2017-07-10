@@ -114,14 +114,14 @@ body{
   margin-bottom: 0px;
 }
 
-#registered {
+#registered{
   position: absolute;
   font-size: 12px;
   right: 15px;
   top: 53px;
 }
 
-.dot {
+.dot{
   background-color: #32050C;
   height: 10px;
   width: 10px;
@@ -177,7 +177,7 @@ body{
   font-family: 'digital-clock-font';
   color: #DC0D29;
   text-align: center;
- /* font-size: 18px;*/
+  font-size: 18px;
 }
 
 .control-text-group{
@@ -196,21 +196,21 @@ body{
   justify-content: center;
 }
 
-.switch{
+.switch {
   background-color: #333333;
-  width: 30px;
-  height: 15px;
+  width: 37.5px;
+  height: 18.75px;
   border-radius: 3px;
 }
 
-.square{
+.square {
   background-color: #3193DE;
-  height: 15px;
-  width: 15px;
+  height: 18.75px;
+  width: 18.75px;
   border-radius: 3px;
   border: 2px solid #000;
   cursor: pointer;
-  margin-left: 0px;
+  margin-left: 0px; 
 }
 
 .on-off{
@@ -294,5 +294,15 @@ body{
   .control-text{
     font-size: 8px;
     margin-left:9px;
+  }
+
+  .square{
+    height: 15px;
+    width: 15px;
+  }
+  
+  .switch{
+    width: 30px;
+    height: 15px;
   }
 }
