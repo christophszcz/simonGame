@@ -9,9 +9,6 @@ var runAmount = 0;
 
 var square = document.getElementById('square-id');
 var count = document.getElementById('count-id');
-var mainCircle = document.getElementById('circle-id'),
-	style = window.getComputedStyle(mainCircle),
-	cHeight = style.getPropertyValue('height');
 
 square.addEventListener('click', function(){
 	if(square.style.marginLeft === '0px' ||  square.style.marginLeft === ''){
