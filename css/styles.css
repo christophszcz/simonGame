@@ -40,18 +40,18 @@ body{
 
 .quarter{
   position: absolute;
-  height: 170px;
-  width: 170px;
+  height: 212.5px;
+  width: 212.5px;
   cursor: pointer;
 }
 
-.red{
+.red {
   float: left;
-  border-radius: 0 170px 0 0;
-  border-right: 170px solid;
+  border-radius: 0 212.5px 0 0;
+  border-right: 212.5px solid;
   border-color: #9F0F17;
-  left: 210px;
-  bottom: 210px;
+  left: 262.5px;
+  bottom: 262.5px;
 }
 
 .red-clicked{
@@ -128,7 +128,7 @@ body{
   border-radius: 8px;
   border: 2px solid #000;
   position: absolute;
-  top: 100px;
+  top: 98px;
   right: 32.2px;
 }
 
@@ -308,5 +308,22 @@ body{
 
   .on-off{
     font-size: 8px;
+  }
+
+  .quarter{
+    height: 170px;
+    width: 170px;
+  }
+
+  .red{
+    border-radius: 0 170px 0 0;
+    border-right: 170px solid;
+    left: 210px;
+    bottom: 210px;
+    border-color: #9F0F17;
+  }
+
+  .red-clicked{
+    border-color: #ff4c4c;
   }
 }
