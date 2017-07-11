@@ -58,11 +58,11 @@ body{
   border-color: #ff4c4c;
 }
 
-.blue{  
-  border-radius: 0 0 170px 0;
-  border-bottom: 170px solid #094A8F;
-  top: 210px;
-  left: 210px;
+.blue {
+  border-radius: 0 0 212.5px 0;
+  border-bottom: 212.5px solid #094A8F;
+  top: 262.5px;
+  left: 262.5px;
 }
 
 .blue-clicked{
@@ -325,5 +325,16 @@ body{
 
   .red-clicked{
     border-color: #ff4c4c;
+  }
+
+  .blue{  
+    border-radius: 0 0 170px 0;
+    border-bottom: 170px solid #094A8F;
+    top: 210px;
+    left: 210px;
+  }
+  
+  .blue-clicked{
+    border-color: #1c8cff;
   }
 }
