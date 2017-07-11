@@ -80,12 +80,12 @@ body{
   border-color: #FED93F;
 }
 
-.green{
-  bottom: 210px;
-  right: 210px;
-  border-radius: 170px 0 0 0;
-  border-left: 170px solid #00A74A;
-}
+.green {
+  bottom: 262.5px;
+  right: 262.5px;
+  border-radius: 212.5px 0 0 0;
+  border-left: 212.5px solid #00A74A;
+} 
 
 .green-clicked{
   border-color: #13FF7C;
@@ -349,5 +349,16 @@ body{
 
   .yellow-clicked{
     border-color: #FED93F;
+  }
+
+  .green{
+    bottom: 210px;
+    right: 210px;
+    border-radius: 170px 0 0 0;
+    border-left: 170px solid #00A74A;
+  }
+
+  .green-clicked{
+    border-color: #13FF7C;
   }
 }
