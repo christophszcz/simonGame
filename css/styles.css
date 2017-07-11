@@ -32,60 +32,60 @@ body{
 
 .circle{
   position: fixed;
-  height: 400px;
-  width: 400px;
+  height: 500px;
+  width: 500px;
   background-color: #000;
-  border-radius: 200px;
+  border-radius: 250px;
 }
 
 .quarter{
   position: absolute;
-  height: 170px;
-  width: 170px;
+  height: 212.5px;
+  width: 212.5px;
   cursor: pointer;
 }
 
-.red{
+.red {
   float: left;
-  border-radius: 0 170px 0 0;
-  border-right: 170px solid;
+  border-radius: 0 212.5px 0 0;
+  border-right: 212.5px solid;
   border-color: #9F0F17;
-  left: 210px;
-  bottom: 210px;
+  left: 262.5px;
+  bottom: 262.5px;
 }
 
 .red-clicked{
   border-color: #ff4c4c;
 }
 
-.blue{  
-  border-radius: 0 0 170px 0;
-  border-bottom: 170px solid #094A8F;
-  top: 210px;
-  left: 210px;
+.blue {
+  border-radius: 0 0 212.5px 0;
+  border-bottom: 212.5px solid #094A8F;
+  top: 262.5px;
+  left: 262.5px;
 }
 
 .blue-clicked{
   border-color: #1c8cff;
 }
 
-.yellow{
-  top: 210px;
-  right: 210px;
-  border-radius: 0 0 0 170px;
-  border-bottom: 170px solid #CCA707;
+.yellow {
+  top: 262.5px;
+  right: 262.5px;
+  border-radius: 0 0 0 212.5px;
+  border-bottom: 212.5px solid #CCA707;
 }
 
 .yellow-clicked{
   border-color: #FED93F;
 }
 
-.green{
-  bottom: 210px;
-  right: 210px;
-  border-radius: 170px 0 0 0;
-  border-left: 170px solid #00A74A;
-}
+.green {
+  bottom: 262.5px;
+  right: 262.5px;
+  border-radius: 212.5px 0 0 0;
+  border-left: 212.5px solid #00A74A;
+} 
 
 .green-clicked{
   border-color: #13FF7C;
@@ -93,43 +93,43 @@ body{
 
 /* Inner Circle */
 
-.mini-circle{
+.mini-circle {
   position: absolute;
-  left: 100px;
-  bottom: 100px;
-  height: 200px;
-  width: 200px;
+  left: 125px;
+  bottom: 125px;
+  height: 250px;
+  width: 250px;
   background-color: #fff;
-  border-radius: 200px;
+  border-radius: 250px;
   z-index: 1001;
   border: 13px solid #000;
 }
 
 .title{
-  color:#000;
-  font-size: 53px;
+  color: #000;
+  font-size: 66.25px;
   text-align: center;
-  margin-top: 14px;
+  margin-top: 17.5px;
   font-family: 'pricedown';
   margin-bottom: 0px;
 }
 
 #registered{
   position: absolute;
-  font-size: 10px;
-  right: 7px;
-  top: 60px;
+  font-size: 12px;
+  right: 15px;
+  top: 80px;
 }
 
 .dot{
   background-color: #32050C;
-  height:8px;
-  width: 8px;
+  height: 10px;
+  width: 10px;
   border-radius: 8px;
   border: 2px solid #000;
   position: absolute;
-  top: 79px;
-  right: 23.6px;
+  top: 98px;
+  right: 32.2px;
 }
 
 .buttons{
@@ -142,13 +142,17 @@ body{
   margin-right: 10px;
 }
 
-.circle-button{
-  height: 15px;
-  width: 15px;
-  border-radius: 8px;
+.circle-button {
+  height: 18.75px;
+  width: 18.75px;
+  border-radius: 9.375px;
   cursor: pointer;
   border: 2px solid #000;
   box-shadow: 0px 3px 1px #888888;
+
+    margin-left: 16.5px;
+    margin-right: 16.5px;
+
 }
 
 .circle-button:active{
@@ -164,15 +168,16 @@ body{
   background-color: #FFFF00;
 }
 
-.count{
-  width:25px;
-  height: 20px;
+.count {
+  width: 31.25px;
+  height: 25px;
   background-color: #32050C;
   border-radius: 4px;
   border: 2px solid #000;
   font-family: 'digital-clock-font';
   color: #DC0D29;
   text-align: center;
+  font-size: 18px;
 }
 
 .control-text-group{
@@ -180,11 +185,10 @@ body{
   justify-content: space-around;
 }
 
-.control-text{
+.control-text {
   font-family: 'Oswald',Arial,sans;
-  font-size: 8px;
+  font-size: 10px;
   text-transform: uppercase;
-  margin-left:9px;
 }
 
 .switch-components{
@@ -192,30 +196,169 @@ body{
   justify-content: center;
 }
 
-.switch{
+.switch {
   background-color: #333333;
-  width: 30px;
-  height: 15px;
+  width: 37.5px;
+  height: 18.75px;
   border-radius: 3px;
 }
 
-.square{
+.square {
   background-color: #3193DE;
-  height: 15px;
-  width: 15px;
+  height: 18.75px;
+  width: 18.75px;
   border-radius: 3px;
   border: 2px solid #000;
   cursor: pointer;
-  margin-left: 0px;
+  margin-left: 0px; 
 }
 
-.on-off{
+.on-off {
   font-family: 'Oswald',Arial,sans;
-  font-size: 8px;
+  font-size: 10px;
   text-transform: uppercase;
   text-align: center;
   margin-left: 3px;
   margin-right: 3px;
   margin-top: 2px;
   margin-bottom: 2px;
+}
+
+/* < 700px */
+
+@media(max-width: 700px){
+
+  .circle{
+    height: 400px;
+    width: 400px;
+    border-radius: 200px;
+  }
+
+  .mini-circle {
+    position: absolute;
+    left: 125px;
+    bottom: 125px;
+    height: 250px;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 250px;
+    z-index: 1001;
+    border: 13px solid #000;
+  }
+
+  .mini-circle{
+    left: 100px;
+    bottom: 100px;
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    border: 10px solid #000;
+  }
+
+  .title{
+    font-size: 53px;
+    margin-top: 14px;
+  }
+
+  #registered{
+    position: absolute;
+    font-size: 10px;
+    right: 7px;
+    top: 60px;
+  }
+
+  .circle-button{
+    height: 15px;
+    width: 15px;
+    border-radius: 8px;
+  }
+
+  .control-text{
+    font-size: 8px;
+    margin-left:9px;
+  }
+
+  .count{
+    width:25px;
+    height: 20px;
+    font-size: 14px;
+  }
+
+  .dot{
+    height:8px;
+    width: 8px;
+    top: 79px;
+    right: 26.1px;
+  }
+
+  .control-text{
+    font-size: 8px;
+    margin-left:9px;
+  }
+
+  .square{
+    height: 15px;
+    width: 15px;
+  }
+
+  .switch{
+    width: 30px;
+    height: 15px;
+  }
+
+  .on-off{
+    font-size: 8px;
+  }
+
+  /* Quarter Sections */
+
+  .quarter{
+    height: 170px;
+    width: 170px;
+  }
+
+  .red{
+    border-radius: 0 170px 0 0;
+    border-right: 170px solid;
+    left: 210px;
+    bottom: 210px;
+    border-color: #9F0F17;
+  }
+
+  .red-clicked{
+    border-color: #ff4c4c;
+  }
+
+  .blue{  
+    border-radius: 0 0 170px 0;
+    border-bottom: 170px solid #094A8F;
+    top: 210px;
+    left: 210px;
+  }
+
+  .blue-clicked{
+    border-color: #1c8cff;
+  }
+
+  .yellow{
+    top: 210px;
+    right: 210px;
+    border-radius: 0 0 0 170px;
+    border-bottom: 170px solid #CCA707;
+  }
+
+  .yellow-clicked{
+    border-color: #FED93F;
+  }
+
+  .green{
+    bottom: 210px;
+    right: 210px;
+    border-radius: 170px 0 0 0;
+    border-left: 170px solid #00A74A;
+  }
+
+  .green-clicked{
+    border-color: #13FF7C;
+  }
 }
