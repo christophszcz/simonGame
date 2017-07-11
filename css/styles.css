@@ -69,11 +69,11 @@ body{
   border-color: #1c8cff;
 }
 
-.yellow{
-  top: 210px;
-  right: 210px;
-  border-radius: 0 0 0 170px;
-  border-bottom: 170px solid #CCA707;
+.yellow {
+  top: 262.5px;
+  right: 262.5px;
+  border-radius: 0 0 0 212.5px;
+  border-bottom: 212.5px solid #CCA707;
 }
 
 .yellow-clicked{
@@ -310,6 +310,8 @@ body{
     font-size: 8px;
   }
 
+  /* Quarter Sections */
+
   .quarter{
     height: 170px;
     width: 170px;
@@ -333,8 +335,19 @@ body{
     top: 210px;
     left: 210px;
   }
-  
+
   .blue-clicked{
     border-color: #1c8cff;
+  }
+
+  .yellow{
+    top: 210px;
+    right: 210px;
+    border-radius: 0 0 0 170px;
+    border-bottom: 170px solid #CCA707;
+  }
+
+  .yellow-clicked{
+    border-color: #FED93F;
   }
 }
