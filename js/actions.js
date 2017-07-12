@@ -12,7 +12,7 @@ var count = document.getElementById('count-id');
 
 square.addEventListener('click', function(){
 	if(square.style.marginLeft === '0px' ||  square.style.marginLeft === ''){
-		if (window.innerWidth > 700){
+		if (window.innerWidth > 800){
 			square.style.marginLeft = '18.75px';
 		} else{
 			square.style.marginLeft = '15px';
@@ -165,9 +165,9 @@ function greenLight(){
 //Window width change event listener fixes sticky switch
 
 window.addEventListener('resize', function(e){
-	if (window.innerWidth > 700 && onOff === true ){
+	if (window.innerWidth > 800 && onOff === true ){
 		square.style.marginLeft = '18.75px';
-	} else if (window.innerWidth < 700 && onOff === true ){
+	} else if (window.innerWidth < 800 && onOff === true ){
 		square.style.marginLeft = '15px';
 	} else {
 		square.style.marginLeft = '0px';

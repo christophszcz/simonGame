@@ -62,6 +62,7 @@ function startGame(){
  				console.log("You " + you);
  			} 
 
+
  			if(JSON.stringify(you) === JSON.stringify(simon) && you.length === 20){ 
 				document.getElementById('victory-sound').play();                   
 				startGame();
@@ -127,8 +128,8 @@ function startGame(){
 			      
       if (j < 21) {             
         playSound();               
-    	}               
-  	}, 3500 * redNumber)
+    	}              
+  	}, 3500 * redNumber ) 
   	//(simon.length === 1 ? 2 : simon.length)
 	}
 	playSound();
