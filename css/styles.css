@@ -117,7 +117,7 @@ body{
 #registered{
   position: absolute;
   font-size: 12px;
-  right: 15px;
+  right: 10px;
   top: 80px;
 }
 
@@ -224,7 +224,7 @@ body{
   margin-bottom: 2px;
 }
 
-/* < 800px */
+/* <= 800px */
 
 @media(max-width: 800px){
 
@@ -264,7 +264,7 @@ body{
     position: absolute;
     font-size: 10px;
     right: 7px;
-    top: 60px;
+    top: 62px;
   }
 
   .circle-button{
@@ -275,7 +275,7 @@ body{
 
   .control-text{
     font-size: 8px;
-    margin-left:9px;
+    margin-left:0px;
   }
 
   .count{
@@ -289,11 +289,6 @@ body{
     width: 8px;
     top: 79px;
     right: 26.1px;
-  }
-
-  .control-text{
-    font-size: 8px;
-    margin-left:9px;
   }
 
   .square{
@@ -356,6 +351,137 @@ body{
     right: 210px;
     border-radius: 170px 0 0 0;
     border-left: 170px solid #00A74A;
+  }
+
+  .green-clicked{
+    border-color: #13FF7C;
+  }
+}
+
+/* <= 400 px */
+
+@media(max-width: 400px){
+
+  .circle{
+    height: 300px;
+    width: 300px;
+    border-radius: 150px;
+  }
+
+  .mini-circle {
+    left: 93.75px;
+    bottom: 93.75px;
+    height: 187.5px;
+    width: 187.5px;
+    border-radius: 187.5px;
+    z-index: 1001;
+    border: 9.75px solid #000;
+  }
+
+  .mini-circle{
+    left: 75px;
+    bottom: 75px;
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+    border: 7.5px solid #000;
+  }
+
+  .title{
+    font-size: 39.75px;
+    margin-top: 14px;
+  }
+
+  #registered{
+    font-size: 7.5px;
+    right: 6px;
+    top: 51px;
+  }
+
+  .circle-button{
+    height: 12px;
+    width: 12px;
+    border-radius: 6px;
+  }
+
+  .count{
+    width:18.75px;
+    height: 15px;
+    font-size: 10.5px;
+  }
+
+  .dot{
+    height:6px;
+    width: 6px;
+    top: 62.25px;
+    right: 20.575px;
+  }
+
+  .control-text{
+    font-size: 6px;
+    margin-left:6.75px;
+  }
+
+  .square{
+    height: 11.25px;
+    width: 11.25px;
+  }
+
+  .switch{
+    width: 22.5px;
+    height: 11.25px;
+  }
+
+  .on-off{
+    font-size: 6px;
+  }
+
+  /* Quarter Sections */
+
+  .quarter{
+    height: 127.5px;
+    width: 127.5px;
+  }
+
+  .red{
+    border-radius: 0 127.5px 0 0;
+    border-right: 127.5px solid;
+    left: 157.5px;
+    bottom: 157.5px;
+    border-color: #9F0F17;
+  }
+
+  .red-clicked{
+    border-color: #ff4c4c;
+  }
+
+  .blue{  
+    border-radius: 0 0 127.5px 0;
+    border-bottom: 127.5px solid #094A8F;
+    top: 157.5px;
+    left: 157.5px;
+  }
+
+  .blue-clicked{
+    border-color: #1c8cff;
+  }
+
+  .yellow{
+    top: 157.5px;
+    right: 157.5px;
+    border-radius: 0 0 0 127.5px;
+    border-bottom: 127.5px solid #CCA707;
+  }
+
+  .yellow-clicked{
+    border-color: #FED93F;
+  }
+
+  .green{
+    bottom: 157.5px;
+    right: 157.5px;
+    border-radius: 127.5px 0 0 0;
+    border-left: 127.5px solid #00A74A;
   }
 
   .green-clicked{
