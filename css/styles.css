@@ -117,7 +117,7 @@ body{
 #registered{
   position: absolute;
   font-size: 12px;
-  right: 15px;
+  right: 10px;
   top: 80px;
 }
 
@@ -224,7 +224,7 @@ body{
   margin-bottom: 2px;
 }
 
-/* < 800px */
+/* <= 800px */
 
 @media(max-width: 800px){
 
@@ -363,9 +363,9 @@ body{
   }
 }
 
-/* < 400 px */
+/* <= 400 px */
 
-@media(max-width: 800px){
+@media(max-width: 400px){
 
   .circle{
     height: 300px;
@@ -399,13 +399,13 @@ body{
 
   #registered{
     font-size: 7.5px;
-    right: 7px;
-    top: 60px;
+    right: 6px;
+    top: 50px;
   }
 
   .circle-button{
-    height: 11.25px;
-    width: 11.25px;
+    height: 12px;
+    width: 12px;
     border-radius: 6px;
   }
 
