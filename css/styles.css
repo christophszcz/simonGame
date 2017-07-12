@@ -264,7 +264,7 @@ body{
     position: absolute;
     font-size: 10px;
     right: 7px;
-    top: 60px;
+    top: 62px;
   }
 
   .circle-button{
@@ -400,7 +400,7 @@ body{
   #registered{
     font-size: 7.5px;
     right: 6px;
-    top: 50px;
+    top: 51px;
   }
 
   .circle-button{
@@ -418,8 +418,8 @@ body{
   .dot{
     height:6px;
     width: 6px;
-    top: 59.25px;
-    right: 19.575px;
+    top: 62.25px;
+    right: 20.575px;
   }
 
   .control-text{
