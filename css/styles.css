@@ -275,7 +275,7 @@ body{
 
   .control-text{
     font-size: 8px;
-    margin-left:9px;
+    margin-left:0px;
   }
 
   .count{
@@ -289,11 +289,6 @@ body{
     width: 8px;
     top: 79px;
     right: 26.1px;
-  }
-
-  .control-text{
-    font-size: 8px;
-    margin-left:9px;
   }
 
   .square{
