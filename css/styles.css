@@ -149,10 +149,8 @@ body{
   cursor: pointer;
   border: 2px solid #000;
   box-shadow: 0px 3px 1px #888888;
-
-    margin-left: 16.5px;
-    margin-right: 16.5px;
-
+  margin-left: 16.5px;
+  margin-right: 16.5px;
 }
 
 .circle-button:active{
@@ -235,12 +233,10 @@ body{
   }
 
   .mini-circle {
-    position: absolute;
     left: 125px;
     bottom: 125px;
     height: 250px;
     width: 250px;
-    background-color: #fff;
     border-radius: 250px;
     z-index: 1001;
     border: 13px solid #000;
@@ -261,7 +257,6 @@ body{
   }
 
   #registered{
-    position: absolute;
     font-size: 10px;
     right: 7px;
     top: 62px;
@@ -419,7 +414,7 @@ body{
 
   .control-text{
     font-size: 6px;
-    margin-left:6.75px;
+    margin-left:-3.75px;
   }
 
   .square{
