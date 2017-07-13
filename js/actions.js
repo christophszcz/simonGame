@@ -14,8 +14,10 @@ square.addEventListener('click', function(){
 	if(square.style.marginLeft === '0px' ||  square.style.marginLeft === ''){
 		if (window.innerWidth > 800){
 			square.style.marginLeft = '18.75px';
-		} else{
+		} else if (window.innerWidth < 800 && window.innerWidth > 400 ){
 			square.style.marginLeft = '15px';
+		} else {
+			square.style.marginLeft = '11.25px';
 		}
 		onOff = true;
 		count.value = '- -';
@@ -23,7 +25,7 @@ square.addEventListener('click', function(){
 			toggleSounds();
 		}
 		clickToggle();
-	} else if ((square.style.marginLeft === '15px' || square.style.marginLeft === '18.75px')  && onOff === true){
+	} else if ((square.style.marginLeft === '15px' || square.style.marginLeft === '18.75px' || square.style.marginLeft === '11.25px')  && onOff === true){
 		square.style.marginLeft = '0px';
 		count.value = '';
 		onOff = false;
@@ -167,9 +169,11 @@ function greenLight(){
 window.addEventListener('resize', function(e){
 	if (window.innerWidth > 800 && onOff === true ){
 		square.style.marginLeft = '18.75px';
-	} else if (window.innerWidth < 800 && onOff === true ){
+	} else if ((window.innerWidth > 400 && window.innerWidth < 800) && onOff === true ){
 		square.style.marginLeft = '15px';
-	} else {
+	} else if (window.innerWidth <= 400 &&  onOff === true ){
+		square.style.marginLeft = '11.25px';
+	}else {
 		square.style.marginLeft = '0px';
 	}
 });
