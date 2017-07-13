@@ -44,9 +44,9 @@ var strict = document.getElementById('strict-id');
 var dot = document.getElementById('dot-id');
 strict.addEventListener('click', function(){
 	if(onOff === true  && (dot.style.backgroundColor === "rgb(50, 5, 12)" || dot.style.backgroundColor === '') ){
-		dot.style.backgroundColor = '#DC0D29';
+		dot.style.backgroundColor = '#FE0000'; 
 		strictMode = true;
-	}else if (onOff === true && dot.style.backgroundColor === "rgb(220, 13, 41)"){
+	}else if (onOff === true && dot.style.backgroundColor === "rgb(254, 0, 0)"){
 		dot.style.backgroundColor = '#32050C';
 		strictMode = false;
 	}
