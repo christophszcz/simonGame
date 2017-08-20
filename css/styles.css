@@ -23,6 +23,14 @@ body{
   background-size: cover;
 }
 
+/* Background Media Queries*/
+
+@media(max-width: 1110px){
+  body{
+    background-size: initial;
+  }
+}
+
 /* Entire Game */
 
 .circle-container{
@@ -224,6 +232,24 @@ body{
   margin-bottom: 2px;
 }
 
+/* Dev Info */
+
+.dev-info{
+  font-family: 'Saira Semi Condensed', sans-serif;
+  font-size: 14px;
+  text-align: right;
+  position: relative;
+  bottom: 25px;
+  right: 10px;
+  color: #000;
+}
+
+#website-link{
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+
 /* <= 800px */
 
 @media(max-width: 800px){
@@ -354,24 +380,6 @@ body{
   .green-clicked{
     border-color: #13FF7C;
   }
-}
-
-/* Dev Info */
-
-.dev-info{
-  font-family: 'Saira Semi Condensed', sans-serif;
-  font-size: 14px;
-  text-align: right;
-  position: relative;
-  bottom: 25px;
-  right: 10px;
-  color: #000;
-}
-
-#website-link{
-  font-weight: 700;
-  text-decoration: none;
-  color: #000;
 }
 
 /* <= 400 px */
