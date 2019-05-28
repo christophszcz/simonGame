@@ -4,6 +4,7 @@ var startPushed = false;
 clickToggle();
 var you = [];
 var runAmount = 0;
+mainInterval = undefined;
 
 //On-off toggle
 
@@ -90,26 +91,26 @@ function toggleSounds(){
 		red.addEventListener("click", function(){
 			document.getElementById('red-sound').play();
 			redLight();
-			you.push('red');
-			// victoryCheck();
+      you.push('red');
+      victoryCheck();
 		});
 		blue.addEventListener("click", function(){
 			document.getElementById('blue-sound').play();
 			blueLight();
-			you.push('blue');
-			// victoryCheck();
+      you.push('blue');
+      victoryCheck();
 		});
 		yellow.addEventListener("click", function(){
 			document.getElementById('yellow-sound').play();
 			yellowLight();
-			you.push('yellow');
-			// victoryCheck();
+      you.push('yellow');
+      victoryCheck();
 		});
 		green.addEventListener("click", function(){
 			document.getElementById('green-sound').play();
 			greenLight();
 			you.push('green');
-			// victoryCheck();
+			victoryCheck();
 		});
 	} else if (onOff === false){
 		redSound.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
@@ -182,3 +183,9 @@ window.addEventListener('resize', function(e){
 		square.style.marginLeft = '0px';
 	}
 });
+
+const victoryCheck = () => {
+  if (JSON.stringify(you) === JSON.stringify(simon)){
+    console.log('correct');
+  }  
+};
