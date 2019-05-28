@@ -11,6 +11,11 @@ var square = document.getElementById('square-id');
 var count = document.getElementById('count-id');
 
 square.addEventListener('click', function(){
+  let smallMargin = square.style.marginLeft === '11.25px';
+  let mediumMargin = square.style.marginLeft === '15px';
+  let largeMargin = square.style.marginLeft === '18.75px';
+  let on = onOff === true;
+
 	if(square.style.marginLeft === '0px' ||  square.style.marginLeft === ''){
 		if (window.innerWidth > 800){
 			square.style.marginLeft = '18.75px';
@@ -25,7 +30,7 @@ square.addEventListener('click', function(){
 			toggleSounds();
 		}
 		clickToggle();
-	} else if ((square.style.marginLeft === '15px' || square.style.marginLeft === '18.75px' || square.style.marginLeft === '11.25px')  && onOff === true){
+	} else if ((smallMargin || mediumMargin || largeMargin) && on){
 		square.style.marginLeft = '0px';
 		count.value = '';
 		onOff = false;
@@ -40,9 +45,9 @@ square.addEventListener('click', function(){
 });
 
 //Strict mode toggle
-var strict = document.getElementById('strict-id');
+var strictElement = document.getElementById('strict-id');
 var dot = document.getElementById('dot-id');
-strict.addEventListener('click', function(){
+strictElement.addEventListener('click', function(){
 	if(onOff === true  && (dot.style.backgroundColor === "rgb(50, 5, 12)" || dot.style.backgroundColor === '') ){
 		dot.style.backgroundColor = '#FE0000'; 
 		strictMode = true;
