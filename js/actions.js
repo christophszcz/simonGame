@@ -185,7 +185,7 @@ window.addEventListener('resize', function(e){
 });
 
 const victoryCheck = () => {
-  if (JSON.stringify(you) === JSON.stringify(simon)){
+  if (JSON.stringify(you) === JSON.stringify(simon)) {
     console.log('correct');
-  }  
+  }
 };
