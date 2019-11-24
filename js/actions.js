@@ -50,7 +50,7 @@ var strictElement = document.getElementById('strict-id');
 var dot = document.getElementById('dot-id');
 strictElement.addEventListener('click', function(){
 	if(onOff === true  && (dot.style.backgroundColor === "rgb(50, 5, 12)" || dot.style.backgroundColor === '') ){
-		dot.style.backgroundColor = '#FE0000'; 
+		dot.style.backgroundColor = '#FE0000';
 		strictMode = true;
 	}else if (onOff === true && dot.style.backgroundColor === "rgb(254, 0, 0)"){
 		dot.style.backgroundColor = '#32050C';
@@ -58,7 +58,7 @@ strictElement.addEventListener('click', function(){
 	}
 });
 
-//Start button 
+//Start button
 var start = document.getElementById('start-id');
 start.addEventListener("click", function(){
 	if (onOff === true){
@@ -135,26 +135,26 @@ function clickToggle(){
 //Button lighting up
 
 function redLight(){
-	red.classList.add('red-clicked');	
+	red.classList.add('red-clicked');
 	if(red.style.borderColor === 'rgb(159, 15, 23)' || red.style.borderColor === ''){
 		setTimeout(function(){
 			red.classList.remove('red-clicked');
-		}, 500);	
+		}, 500);
 	}
 }
 
 function blueLight(){
 	blue.classList.add('blue-clicked');
-	if(blue.style.borderColor === 'rgb(9,74,143)' || blue.style.borderColor === ''){	
+	if(blue.style.borderColor === 'rgb(9,74,143)' || blue.style.borderColor === '') {
 		setTimeout(function(){
 			blue.classList.remove('blue-clicked');
-		}, 500);	
+		}, 500);
 	}
 }
 
 function yellowLight(){
-	yellow.classList.add('yellow-clicked');	
-	if(yellow.style.borderColor === 'rgb(204,167,7)' || yellow.style.borderColor === ''){	
+	yellow.classList.add('yellow-clicked');
+	if (yellow.style.borderColor === 'rgb(204,167,7)' || yellow.style.borderColor === '') {
 		setTimeout(function(){
 			yellow.classList.remove('yellow-clicked');
 		}, 500);
@@ -162,8 +162,8 @@ function yellowLight(){
 }
 
 function greenLight(){
-	green.classList.add('green-clicked');	
-	if(green.style.borderColor === 'rgb(0,167,74)' || green.style.borderColor === ''){	
+	green.classList.add('green-clicked');
+	if(green.style.borderColor === 'rgb(0,167,74)' || green.style.borderColor === ''){
 		setTimeout(function(){
 			green.classList.remove('green-clicked');
 		}, 500);
