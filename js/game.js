@@ -1,18 +1,18 @@
-var colors = ['red', 'blue', 'yellow', 'green'], 
-		number, 
-		total = [], 
-		simon =[]; 
-		k = 0; 
+var colors = ['red', 'blue', 'yellow', 'green'],
+		number,
+		total = [],
+		simon =[];
+		k = 0;
 		j = 0;
- 
+
 function randomNumber(){
 	number = Math.floor(Math.random() * 4);
 	console.log(randomNumber);
 }
 
-const playSound = () => {          
-	mainInterval = setTimeout(function () { 
-		// Off 
+const playSound = () => {
+	mainInterval = setTimeout(function () {
+		// Off
 		if(square.style.marginLeft === '0px'){
 		 count.value = '';
 		 total = [];
@@ -27,24 +27,24 @@ const playSound = () => {
 		 return;
 	 }
 
-	 //Show you array
-	 if(you.length > 0){
+	 	//Show you array
+	 	if(you.length > 0){
 			console.log("You " + you);
-		} 
+		}
 
-		if(JSON.stringify(you) === JSON.stringify(simon) && you.length === 20){ 
-		 document.getElementById('victory-sound').play();                   
-		 startGame();
-		 count.value = ':)'; 
+		if(JSON.stringify(you) === JSON.stringify(simon) && you.length === 20){
+		    document.getElementById('victory-sound').play();
+		    startGame();
+		    count.value = ':)';
 	 //Strict mode restart
 		} else if (strictMode && JSON.stringify(you) !== JSON.stringify(simon)){
-			document.getElementById('mistake-sound').play();                   
+			document.getElementById('mistake-sound').play();
 			startGame();
 			count.value = 'X';
 			return;
 		// Cancel after wrong answer
-		} else if(JSON.stringify(you) !== JSON.stringify(simon)){ 
-		 document.getElementById('mistake-sound').play();                   
+		} else if(JSON.stringify(you) !== JSON.stringify(simon)){
+		 	document.getElementById('mistake-sound').play();
 			count.value = 'X';
 	 } else {
 			simon.push(total[j]);
@@ -68,8 +68,8 @@ const playSound = () => {
 				 j = 0;
 				 k = 0;
 				 return;
-			 }    
-				
+			 }
+
 			 document.getElementById(simon[k] + '-sound').play();
 			 if (simon[k] === 'red'){
 				 redLight();
@@ -80,24 +80,24 @@ const playSound = () => {
 			 }else if (simon[k] === 'green'){
 				 greenLight();
 			 }
-				k++; 
+				k++;
 				if(k < simon.length){
 					incremental();
 				}
 			},1000)
 		}
 		incremental();
-		if(JSON.stringify(you) === JSON.stringify(simon)){ 
+		if(JSON.stringify(you) === JSON.stringify(simon)){
 		 redNumber ++;
-		 j++; 	
+		 j++;
 	 } else {
 		 redNumber = simon.length + 1;
-		 j = simon.length; 
+		 j = simon.length;
 	 }
-				 
-	 if (j < 21) {             
-		 playSound();               
-	 }        
+
+	 if (j < 21) {
+		 playSound();
+	 }
  }, 3500 * redNumber)
 };
 
@@ -117,11 +117,11 @@ function startGame(){
 		j = 0;
 		k = 0;
 	}
-     
-	var j = 0; 
+
+	var j = 0;
 	redNumber = 1;
 	you = [];
-	// Off 
+	// Off
 	if(square.style.marginLeft === '0px') {
 		count.value = '';
 		total = [];
@@ -135,7 +135,7 @@ function startGame(){
 		redNumber = 1;
 
 		return;
-	}  
+	}
 	playSound();
 }
 
