@@ -93,7 +93,7 @@ body {
   right: 262.5px;
   border-radius: 212.5px 0 0 0;
   border-left: 212.5px solid #00A74A;
-} 
+}
 
 .green-clicked{
   border-color: #13FF7C;
@@ -246,7 +246,7 @@ body {
 #website-link {
   font-weight: 700;
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 /* <= 800px */
@@ -478,7 +478,7 @@ body {
     border-color: #ff4c4c;
   }
 
-  .blue {  
+  .blue {
     border-radius: 0 0 127.5px 0;
     border-bottom: 127.5px solid #094A8F;
     top: 157.5px;
